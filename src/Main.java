@@ -1,20 +1,28 @@
 public class Main {
 
-    public static int getYear() {
-        int year = 2020;
-        return year;
-
+    public static int getDistance() {
+        int deliveryDistance = 95;
+        return deliveryDistance;
     }
 
     public static void main(String[] args) {
+        int distance = getDistance() ;
+        if (distance <= 20) {
+            System.out.println("Потребуется дней: 1");
+        } else if (distance > 20 && distance <= 60) {
+            System.out.println("Потребуется дней: 2");
+        } else if (distance > 60 && distance <= 100) {
+            System.out.println("Потребуется дней: 3");
+        }
 
-        int year = getYear();
-        if (year % 4 == 0 && year % 100 != 0) {
-            System.out.println(year + "  - високосный год");
-        } else if (year % 100 == 0 && year % 400 == 0) {
-            System.out.println(year + " - високосный год");
-        } else {
-            System.out.println(year + " - не високосный год");
         }
     }
-}
+
+
+
+
+
+
+
+
+
