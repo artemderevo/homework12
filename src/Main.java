@@ -1,20 +1,40 @@
+import java.time.LocalDate;
+
 public class Main {
 
-    public static int getYear() {
-        int year = 2020;
-        return year;
+    public static int getClientOS() {
+        int clientOs = 1;
+        return clientOs;
+    }
 
+    public static int getYear() {
+        int currentYear = LocalDate.now().getYear();
+        return currentYear;
     }
 
     public static void main(String[] args) {
-
+        int os = getClientOS();
         int year = getYear();
-        if (year % 4 == 0 && year % 100 != 0) {
-            System.out.println(year + "  - високосный год");
-        } else if (year % 100 == 0 && year % 400 == 0) {
-            System.out.println(year + " - високосный год");
-        } else {
-            System.out.println(year + " - не високосный год");
+        if (os == 1 && year < 2022) {
+            System.out.println("Установите облегченную версию приложения для Android");
+        } else if (os == 1 && year >= 2022) {
+            System.out.println("Установите версию приложения для Android");
+        }
+        if (os == 0 && year < 2022) {
+            System.out.println("Установите облегченную версию приложения для iOS");
+        } else if (os == 0 && year >= 2022) {
+            System.out.println("Установите версию приложения для iOS");
+
+        }
+
         }
     }
-}
+
+
+
+
+
+
+
+
+
