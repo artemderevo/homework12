@@ -1,7 +1,7 @@
 public class Main {
 
     public static int getDistance() {
-        int deliveryDistance = 95;
+        int deliveryDistance = 150;
         return deliveryDistance;
     }
 
@@ -11,7 +11,7 @@ public class Main {
             System.out.println("Потребуется дней: 1");
         } else if (distance > 20 && distance <= 60) {
             System.out.println("Потребуется дней: 2");
-        } else if (distance > 60 && distance <= 100) {
+        } else if (distance > 60) {
             System.out.println("Потребуется дней: 3");
         }
 
