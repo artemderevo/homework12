@@ -14,15 +14,16 @@ public class Main {
 
     public static void main(String[] args) {
         int os = getClientOS();
+        int currentYear = getYear();
         int year = getYear();
-        if (os == 1 && year < 2022) {
+        if (os == 1 && currentYear < 2021) {
             System.out.println("Установите облегченную версию приложения для Android");
-        } else if (os == 1 && year >= 2022) {
+        } else if (os == 1 && currentYear >= year) {
             System.out.println("Установите версию приложения для Android");
         }
-        if (os == 0 && year < 2022) {
+        if (os == 0 && currentYear < 2021) {
             System.out.println("Установите облегченную версию приложения для iOS");
-        } else if (os == 0 && year >= 2022) {
+        } else if (os == 0 && currentYear >= year) {
             System.out.println("Установите версию приложения для iOS");
 
         }
